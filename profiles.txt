@@ -1,0 +1,3 @@
+{"newName":"Donnie","newPhoto":"img/img","newScore":["5","4","3","4","3"]}
+{"newName":"donnie","newPhoto":"img/img","newScore":["1","1","1","1","1"]}
+{"newName":"donnie\n","newPhoto":"img\n","newScore":"1,1,1,1,1\n"}
