@@ -12,6 +12,8 @@ var inquirer = require("inquirer");
 	this.newScore = newScore;
 }*/
 
+var profileArray = [];
+
 var runProgram = function() {
 
 	var answerArray = [];
@@ -90,11 +92,48 @@ var runProgram = function() {
 					newScore: answerArray
 				}
 
-				console.log(userProfile)
+				//var userProfile = [choice.name, choice.photo, answerArray]
 
-				fs.appendFileSync("profiles.txt", JSON.stringify(userProfile) + "\n");
+				//console.log(userProfile)
 
-				//console.log(answerArray.JSON.stringify());
+				profileArray.push(userProfile);
+
+				console.log(profileArray[0].newName);
+
+				//fs.appendFileSync("profiles.txt", userProfile + "\n");
+
+				/*fs.readFile(__dirname + "/profiles.txt", "utf8", function(err, data){
+					//console.log(data);
+					var blankArray1 = []
+					var content = data;
+					//console.log(data);
+					//console.log(content);
+					//for (var i = 0; i < content.length; i++) {
+					//	console.log(content[i]);
+					//}
+
+					//for each (var item in content) {
+					//	console.log(item);
+					//}
+
+					//console.log(JSON.parse(data));
+
+				});*/
+
+				//console.log(JSON.stringify(userProfile));
+
+				//var obj = JSON.parse(fs.readFileSync("profiles.txt", "utf8"));
+
+				//for (var profile in obj) {
+				//	console.log(profile);
+				//}
+
+				//console.log(obj);
+
+
+				//var obj = JSON.parse(fs.readFileSync("profiles.txt", "utf8"));
+
+				//console.log(userProfile[0].newName);
 
 				/*if (choice.one === "2") {
 					console.log("We did it dog!")
@@ -102,6 +141,8 @@ var runProgram = function() {
 				else {
 					console.log(":(");
 				}*/
+
+				runProgram();
 			});
 			//end inner-inquirer
 		}
