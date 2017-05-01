@@ -29,7 +29,7 @@ module.exports = function(app) {
 				if (difference <= friendFound.score) {
 					friendFound.name = friendList[i].name;
 					friendFound.photo = friendList[i].photo;
-					friendFound.score = finalScore;
+					friendFound.score = difference;
 				}
 			}
 		}
