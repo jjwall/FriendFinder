@@ -14,6 +14,8 @@ var inquirer = require("inquirer");
 
 var profileArray = [];
 
+var friendArray;
+
 var runProgram = function() {
 
 	var answerArray = [];
@@ -87,38 +89,31 @@ var runProgram = function() {
 				//var userProfile = new newUser(choice.name, choice.photo, answerArray);
 
 				var userProfile = {
-					newName: choice.name,
-					newPhoto: choice.photo,
-					newScore: answerArray
+					name: choice.name,
+					photo: choice.photo,
+					score: answerArray
 				}
-
-				//var userProfile = [choice.name, choice.photo, answerArray]
 
 				//console.log(userProfile)
 
 				profileArray.push(userProfile);
 
-				console.log(profileArray[0].newName);
+				//console.log(profileArray[0].newName);
 
-				//fs.appendFileSync("profiles.txt", userProfile + "\n");
+				fs.appendFileSync("profiles.txt", ",\n" + JSON.stringify(userProfile));
 
-				/*fs.readFile(__dirname + "/profiles.txt", "utf8", function(err, data){
-					//console.log(data);
-					var blankArray1 = []
-					var content = data;
-					//console.log(data);
-					//console.log(content);
-					//for (var i = 0; i < content.length; i++) {
-					//	console.log(content[i]);
-					//}
-
-					//for each (var item in content) {
-					//	console.log(item);
-					//}
-
-					//console.log(JSON.parse(data));
-
-				});*/
+				fs.readFile(__dirname + "/profiles.txt", "utf8", function(err, data){
+					var output;
+					if (err) {
+						output = "[]";
+					}
+					else {
+						output = '[' + data + ']';
+					}
+					this.server = JSON.parse(output);
+					console.log(this.server[0].name);
+					//console.log(friendArray);
+				});
 
 				//console.log(JSON.stringify(userProfile));
 
@@ -142,7 +137,7 @@ var runProgram = function() {
 					console.log(":(");
 				}*/
 
-				runProgram();
+				//runProgram();
 			});
 			//end inner-inquirer
 		}
