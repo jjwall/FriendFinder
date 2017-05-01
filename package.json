@@ -1,14 +1,29 @@
 {
-  "name": "server",
+  "name": "FriendFinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Friend finder app matches you with closest scoring friends",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjwall/FriendFinder.git"
+  },
+  "keywords": [
+    "homework",
+    "front-end",
+    "back-end",
+    "node.js",
+    "express.js"
+  ],
+  "author": "Jacob Wallace",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjwall/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/jjwall/FriendFinder",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2"
