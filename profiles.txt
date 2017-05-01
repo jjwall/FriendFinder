@@ -3,4 +3,7 @@
 {"name":"sehseh","photo":"sehseh","score":["1","1","1","1","1"]},
 {"name":"seseh","photo":"seh","score":["1","1","1","1","1"]},
 {"name":"sehseh","photo":"","score":["1","1","1","1","1"]},
+{"name":"sehseh","photo":"","score":["1","1","1","1","1"]},
+{"name":"sehseh","photo":"sehseh","score":["1","1","1","1","1"]},
+{"name":"sehseh","photo":"seh","score":["1","1","1","1","1"]},
 {"name":"sehseh","photo":"","score":["1","1","1","1","1"]}
